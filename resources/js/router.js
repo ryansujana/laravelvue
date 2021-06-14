@@ -10,11 +10,17 @@ const routes = [
 	path: '/',
 	name: 'welcome',
 	component: Welcome
+},
+{
+	path: '/categories',
+	name: 'categories',
+	component: () => import('./views/Categories.vue')
 }
 ];
 
 const router = new Router({
-	routes: routes
+	routes: routes,
+	linkActiveClass: 'active'
 });
 
 export default router;
